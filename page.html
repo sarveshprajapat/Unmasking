@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unmasking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container fade-in">
+    <h1 class="main-title slide-down">Unreveal Your Issue</h1>
+
+    <form id="issueForm" class="form-box slide-up">
+      <h4> Write your issue title... Below</h4>
+      <input type="text" id="issueTitle" placeholder="Issue Title" required />
+      <h4>Describe Issue Below</h4>
+      <textarea id="issueDescription" placeholder="Describe the issue..." required></textarea>
+      <h4>Must select priorty of your Issue...</h4>
+      <select id="issuePriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <h4>Attach Image (optional)</h4>
+  <input type="file" id="image-upload" accept="image/*" />
+      <button type="submit">Submit Issue</button>
+    </form>
+    
+        <div class="container fade-in">
+      
+          <!-- 🔙 Back Button -->
+          <button class="back-button" onclick="goBack()">← Home Page</button>
+      
+          <h1 class="main-title slide-down">History</h1>
+      
+          <!-- Rest of your existing content... -->
+      
+    <h2 class="section-title fade-in-delay">📋 Current Issues</h2>
+    <div id="issueList" class="issues-list"></div>
+  </div>
+<!-- Chatbot Toggle Button -->
+<button class="chat-toggle" onclick="toggleChat()">💬 Chat</button>
+
+<!-- Chatbot Window -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chat-header">
+    <span>Need Help?</span>
+    <button onclick="resetChat()">🗑️</button>
+    <button onclick="toggleChat()">✖️</button>
+  </div>
+  <div class="chatbox" id="chatbox">
+    <div class="bot-msg">👋 Hello! How can I help you today?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your message..." onkeydown="handleKey(event)" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
