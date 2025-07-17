@@ -50,7 +50,7 @@ function fetchIssues() {
   });
 }
 function goBack() {
-    window.location.href = "welcome.html"; // Navigate back to welcome page
+    window.location.href = "index.html"; // Navigate back to welcome page
   }
   
 
